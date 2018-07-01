@@ -18,14 +18,12 @@ public class ProductFactoryDemo {
 		BlockingQueue<RawMaterial> queue = new LinkedBlockingDeque<>();
 		ConveyorBelt belt;
 		int numOfMachines, numOfBolts;
-		int total;
 
 		public Producer(BlockingQueue<RawMaterial> blockngQueue, ConveyorBelt belt, int numOfMachines, int numOfBolts) {
 			this.queue = blockngQueue;
 			this.belt = belt;
 			this.numOfBolts = numOfBolts;
 			this.numOfMachines = numOfMachines;
-			this.total = numOfBolts + numOfMachines;
 		}
 
 		@Override
