@@ -23,7 +23,7 @@ public class ProductFactoryDemoTest {
 
 	@Test
 	public void testNoProductIfNoRawMaterial() throws InterruptedException {
-		ConveyorBelt belt = new ConveyorBelt();
+		ConveyorBelt belt = demo.new ConveyorBelt();
 		BlockingQueue<RawMaterial> blockngQueue = new LinkedBlockingDeque<>();
 		Thread producer = new Thread(demo.new Producer(blockngQueue, belt, 0, 0));
 		Thread consumers[] = new Thread[2];
@@ -38,7 +38,7 @@ public class ProductFactoryDemoTest {
 	
 	@Test
 	public void testProductCount_WithMachine2_And_Bold5() throws InterruptedException {
-		ConveyorBelt belt = new ConveyorBelt();
+		ConveyorBelt belt = demo.new ConveyorBelt();
 		BlockingQueue<RawMaterial> blockngQueue = new LinkedBlockingDeque<>();
 		Thread producer = new Thread(demo.new Producer(blockngQueue, belt, 2, 5));
 		Thread cons[] = new Thread[2];
@@ -53,7 +53,7 @@ public class ProductFactoryDemoTest {
 
 	@Test
 	public void testProductCount_WithMachine2_And_Bold6() throws InterruptedException {
-		ConveyorBelt belt = new ConveyorBelt();
+		ConveyorBelt belt = demo.new ConveyorBelt();
 		BlockingQueue<RawMaterial> blockngQueue = new LinkedBlockingDeque<>();
 		Thread producer = new Thread(demo.new Producer(blockngQueue, belt, 2, 6));
 		Thread cons[] = new Thread[2];
@@ -68,7 +68,7 @@ public class ProductFactoryDemoTest {
 
 	@Test
 	public void testProductCount_WithMachine3_And_Bold8() throws InterruptedException {
-		ConveyorBelt belt = new ConveyorBelt();
+		ConveyorBelt belt = demo.new ConveyorBelt();
 		BlockingQueue<RawMaterial> blockngQueue = new LinkedBlockingDeque<>();
 		Thread producer = new Thread(demo.new Producer(blockngQueue, belt, 2, 8));
 		Thread cons[] = new Thread[2];
@@ -83,7 +83,7 @@ public class ProductFactoryDemoTest {
 
 	@Test
 	public void testProductCount_WithMachine3_And_Bold9() throws InterruptedException {
-		ConveyorBelt belt = new ConveyorBelt();
+		ConveyorBelt belt = demo.new ConveyorBelt();
 		BlockingQueue<RawMaterial> blockngQueue = new LinkedBlockingDeque<>();
 		Thread producer = new Thread(demo.new Producer(blockngQueue, belt, 2, 9));
 		Thread cons[] = new Thread[2];
@@ -98,19 +98,19 @@ public class ProductFactoryDemoTest {
 
 	@Test
 	public void testBoltToString() {
-		Bolt bolt = new Bolt();
+		Bolt bolt = demo.new Bolt();
 		assertEquals(bolt.toString(), "Bolt");
 	}
 
 	@Test
 	public void testMachineToString() {
-		Machine machine = new Machine();
+		Machine machine = demo.new Machine();
 		assertEquals(machine.toString(), "Machine");
 	}
 	
 	@Test
 	public void testGetInvalidMaterial() {
-		ConveyorBelt belt = new ConveyorBelt();
+		ConveyorBelt belt = demo.new ConveyorBelt();
 		assertEquals(belt.getRawMaterial(null), null);
 	}
 	

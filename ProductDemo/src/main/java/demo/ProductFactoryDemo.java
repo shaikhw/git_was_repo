@@ -79,7 +79,7 @@ public class ProductFactoryDemo {
 		}
 	}
 
-	static class ConveyorBelt {
+	class ConveyorBelt {
 
 		RawMaterial getRawMaterial(String type) {
 			if ("Bolt".equalsIgnoreCase(type)) {
@@ -89,7 +89,7 @@ public class ProductFactoryDemo {
 			}
 			return null;
 		}
-		
+
 		List<RawMaterial> getRawMaterial(int num, String type) {
 			List<RawMaterial> materialList = new ArrayList<>();
 			for (int i = 0; i < num; i++) {
@@ -100,17 +100,17 @@ public class ProductFactoryDemo {
 		}
 	}
 
-	static class RawMaterial {
+	class RawMaterial {
 	}
 
-	static class Bolt extends RawMaterial {
+	class Bolt extends RawMaterial {
 		@Override
 		public String toString() {
 			return "Bolt";
 		}
 	}
 
-	static class Machine extends RawMaterial {
+	class Machine extends RawMaterial {
 		@Override
 		public String toString() {
 			return "Machine";
