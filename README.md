@@ -1,8 +1,5 @@
 # git_was_repo
 
-Name: Waseem Shaikh
-Years of experience: 12
-
 Build IDE: Eclipse
 JDK Version: jdk1.8.0_111
 
